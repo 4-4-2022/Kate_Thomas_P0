@@ -1,0 +1,67 @@
+# Simple Business API
+
+> Leveraging Java 8, create an application that simulates simple transactions for a themed (work-appropriate) business of your choice. 
+The application is a health savings account for pets. Vet clinics will offer the app to their customers. Owners will add funds by automatic draft
+or manual upload. When a pet needs a vet service or product, the owner will have the option to apply the funds to the invoice. 
+
+## Requirements:
+
+### Overview of Required Technologies:
+
+* Java 8
+* Maven
+* JUnit
+* Mockito
+* Log4J/Logback
+* PostgreSQL
+* JDBC
+
+### Project Format and Metrics:
+
+* Build the application using Java 8.
+* The project should be a Maven project.
+* All interaction with the user should be done through the console using the Scanner class.
+* All information should be persisted using a SQL database; we're specifically using PostgreSQL.
+* You must use AWS RDS to host your DB.
+* You should use the DAO design pattern with JDBC for data connectivity.
+* You must write at least 30 JUnit tests to ensure application quality.
+* Logging should be accomplished using a logging framework such as Log4J or Logback.
+* All transactions should be logged.
+
+### Functional Requirements:
+
+* Customers of the business should be able to register with a username and password.
+Each pet family will have a username and password.
+
+* Customers should be able to have multiple accounts with the business (e.g. having two separate accounts with different credentials should be possible).
+
+The pet family can have multiple accounts (husband, wife, ex-spouse)
+
+* Customers should be able to add a secondary user to their accounts for their service (e.g. add a child user to a movie streaming service, 
+add another user who can purchase items using their account).
+
+Families can add authorized users to the account (dog walkers, emergency contact, pet sitter, etc.).
+
+* Once the account is open, customers should be able to add funds, remove funds, and transfer funds between different accounts.
+Customers can add funds, remove funds, or transfer funds to other accounts. Transfer examples: (1) after a dog fight, one responsible account owner may tranfer funds
+to the injured dog's account; (2) owners may donate funds to a charity account; (3) a new family adopts the pet after the death of original owner
+
+* All basic validation should be done, such as accounting for trying to input negative amounts, overdrawing from account funds, etc.
+* Employees of the business should be able to view all of their customers' information. This includes:
+   * Account information (e.g. how many users have access to the account)
+   * Account balances (e.g. remaining funds for the account)
+   * Personal information (e.g. users' addresses, date of birth, etc.)
+* Employees should be able to cancel accounts.
+* There should also be special employees who are Administrators who can view and edit all accounts.
+Administrators at each vet office will be able to view and edit accounts.
+This includes:
+   * Canceling accounts
+   * Modifying account balances and users' personal information
+
+## Submitting Your Work
+
+- Create a new repository within this GitHub organization (naming convention: `firstname_lastname_p0`)
+
+## Presentation
+
+- [ ] 5 minute live demonstration of project
